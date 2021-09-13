@@ -1,0 +1,110 @@
+<html>
+
+	<head>
+		<!-- Imports the aframe script -->
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
+		<!-- Imports the teleport script that is provided -->
+		<script src="scripts/teleportBack.js"></script>
+     <script src="scripts/disappear.js"></script>
+     <script src="scripts/sphereexpand.js"></script>
+     <script src="scripts/teleport.js"></script>
+     <script src="scripts/change-world.js"></script>
+     <script src="scripts/rooms.js"></script>
+	</head>
+
+	<body>
+		<a-scene>
+			<!-- Replace the src with your own image links -->
+			<a-assets>
+        <img id="area1" src="assets/voidWorm.png">
+				<img id="area2" src="assets/syntax.png">
+        <img id="area3" src="assets/vibe.jpg">
+        <img id="area4" src="assets/trio.jpg">
+    	</a-assets>
+      
+			<!-- Adds the moveable camera and cursor. The cursor is needed to make things clickable -->
+      <a-entity id="camera" position="0 1.6 3" camera look-controls wasd-controls             cursor = "rayOrigin: mouse">
+      </a-entity>
+
+
+			<!-- The sky - should be set to your home page -->
+      <a-sky id="sky" src="#area2"></a-sky>
+
+			<!-- Entities for home page to hold the plane and text for teleporting  -->
+			<a-entity id="header" position="0 4.069 -2.5" rotation="0 0 0" class="homepage">
+				<a-plane id="holder" color="red" scale="5 1 3"></a-plane>
+				<a-text value="Design" width="5" align="center" width="5" wrap-count="28""></a-text>
+			</a-entity>
+
+
+    <a-entity id="leftNav" position="-7.819 3 5" rotation="0 90 0" class="homepage"> 
+
+      <a-entity id="designLeft-green1" class="homepage" homeroom>
+				<a-plane id="teacherPanel" color="green" scale="2.640 1.230 1"></a-plane>
+				<a-text value="HOME" width="5" align="center" width="5" wrap-count="28"></a-text>
+			</a-entity>
+
+      <a-entity id="designLeft-green2" position="0 -1.681 0" class="homepage">
+				<a-plane id="teacherPanel" color="green" scale="2.640 1.230 1"></a-plane>
+				<a-text value="DESIGN \n AND \n VISUAL COMMUNICATION" width="3" align="center" width="5" wrap-count="28"></a-text>
+			</a-entity>
+      
+    </a-entity> <!--LEFT NAV-->
+
+
+
+    <a-entity id="rightNav" position="7.819 3 5" rotation="0 -90 0" class="homepage"> 
+
+      <a-entity id="designRight-green1" class="homepage" paintroom>
+				<a-plane id="teacherPanel" color="green" scale="2.640 1.230 1"></a-plane>
+				<a-text value="PAINTING" align="center" width="5" wrap-count="28"></a-text>
+			</a-entity>
+
+      <a-entity id="designRight-green2" position="0 -1.681 0" class="homepage" photoroom>
+				<a-plane id="teacherPanel" color="green" scale="2.640 1.230 1"></a-plane>
+				<a-text value="PHOTOGRAPHY" align="center" width="5" wrap-count="28"></a-text>
+			</a-entity>
+
+    </a-entity> <!--RIGHT NAV-->
+
+
+      <a-entity id="homebelowpurple" position="0 2.250 -2.5" rotation="0 0 0" class="homepage">
+				<a-plane id="holder" color="purple" scale="5 2 0"></a-plane>
+				<a-text value="Brief Desc" align="center" width="5" wrap-count="28"  text=""></a-text>
+			</a-entity> <!--DESC-->
+
+
+    <a-entity id="imgExamplesLeft" position="-6 2 1" rotation="0 50 0" class="homepage"> 
+      <a-entity id="img1" class="homepage">
+				<a-plane id="holder" color="orange" scale="2.5 2 1" src="#area2"></a-plane>
+				<a-text value="IMAGE EXAMPLE" align="center" width="2" wrap-count="28"  text=""></a-text>
+			</a-entity>
+
+      <a-entity id="img2" position="3.385 0 -0.019" rotation="0 0 0" class="homepage">
+				<a-plane id="holder" color="orange" scale="2.5 2 1" src="#area2"></a-plane>
+				<a-text value="IMAGE EXAMPLE" align="center" width="2" wrap-count="28"  text=""></a-text>
+			</a-entity>
+    </a-entity> <!--LEFT--> 
+
+
+    <a-entity id="imgExamplesRight" position="4.035 2 -1.646" rotation="0 -50 0" class="homepage"> 
+      <a-entity id="img1" class="homepage">
+				<a-plane id="holder" color="orange" scale="2.5 2 1" src="#area2"></a-plane>
+				<a-text value="IMAGE EXAMPLE" align="center" width="2" wrap-count="28"  text=""></a-text>
+			</a-entity>
+
+      <a-entity id="img2" position="3.385 0 -0.019"class="homepage">
+				<a-plane id="holder" color="orange" scale="2.5 2 1" src="#area2"></a-plane>
+				<a-text value="IMAGE EXAMPLE" align="center" width="2" wrap-count="28"  text=""></a-text>
+			</a-entity>
+    </a-entity> <!--RIGHT--> 
+
+
+		</a-scene>
+	</body>
+</html>
+
+<!--<a-text value="Hutt Valley High Maths Department" width="5" wrap-count="28" position="-1.01914 0.081 -2.59678" text=""></a-text>
+
+ -->
